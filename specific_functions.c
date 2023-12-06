@@ -57,3 +57,11 @@ int print_percent(va_list arguments)
 	write(1, &c, 1);
 	return (1);
 }
+/**
+int print_decimal(va_list arguments)
+{
+}
+int print_integer(va_list arguments)
+{
+}
+*/

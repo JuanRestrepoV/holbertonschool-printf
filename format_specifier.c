@@ -21,6 +21,7 @@ int format_specifier(char format, va_list arguments)
 	{
 		return (print_string(arguments));
 	}
+	/**
 	if (format == 'd')
 	{
 		return (print_decimal(arguments));
@@ -33,5 +34,6 @@ int format_specifier(char format, va_list arguments)
 	{
 		return (print_percent(arguments));
 	}
+	*/
 	return (0);
 }

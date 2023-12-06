@@ -23,33 +23,8 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%' && format[i + 1] != '\0')
 		{
-			i++;
-			if (format[i] == 'c')
-			{
-				count += (print_char(arguments));
-			}
-			if (format[i] == 's')
-			{
-				count += (print_string(arguments));
-			}
-			if (format[i] == 'd')
-			{
-				count += (print_decimal(arguments));
-			}
-			if (format[i] == 'i')
-			{
-				count += (print_integer(arguments));
-			}
-			if (format[i] == '%')
-			{
-				count += (print_percent(arguments));
-			}
-			else
-			{
-				write(1, "%", 1);
-				write(1, &format, 1);
-				return (2);
-			}
+			format++;
+			count += format_specifier(format, arguments);
 		}
 		else
 		{

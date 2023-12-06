@@ -15,27 +15,22 @@ int format_specifier(char format, va_list arguments)
 {
 	if (format == 'c')
 	{
-		print_char(arguments);
-		return (1);
+		return (print_char(arguments));
 	}
 	if (format == 's')
 	{
-		print_string(arguments);
-		return (1);
+		return (print_string(arguments));
 	}
 	if (format == 'd')
 	{
-		print_decimal(arguments);
-		return (1);
+		return (print_decimal(arguments));
 	}
 	if (format == 'i')
 	{
-		print_integer(arguments);
-		return (1);
+		return (print_integer(arguments));
 	}
 	if (format == '%')
 	{
-		print_percent(arguments);
-		return (1);
+		return (print_percent(arguments));
 	}
 }

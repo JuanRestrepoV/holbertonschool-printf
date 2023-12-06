@@ -33,4 +33,5 @@ int format_specifier(char format, va_list arguments)
 	{
 		return (print_percent(arguments));
 	}
+	return (0);
 }

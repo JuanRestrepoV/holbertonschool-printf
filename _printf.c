@@ -24,7 +24,7 @@ int _printf(const char *format, ...)
 		if (format[i] == '%' && format[i + 1] != '\0')
 		{
 			format++;
-			count += format_specifier(format, arguments);
+			count += format_specifier(*format, arguments);
 		}
 		else
 		{

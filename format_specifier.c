@@ -30,10 +30,16 @@ int format_specifier(char format, va_list arguments)
 	{
 		return (print_integer(arguments));
 	}
+	*/
 	if (format == '%')
 	{
 		return (print_percent(arguments));
 	}
-	*/
+	else
+	{
+		write(1, "%", 1);
+		write(1, &format, 1);
+		return (2);
+	}
 	return (0);
 }

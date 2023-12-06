@@ -1,12 +1,9 @@
-/**
-* This file cotains the specific function that must execute in
-* every format specifier case.
-*/
 #include "main.h"
 #include <stdarg.h>
 #include <unistd.h>
+
 /**
-* print_char - Fucntion that print a char using write function.
+* print_char - Function that print a char using write function.
 * @arguments: va_list type variable.
 *
 * Description: this function receive a va_list 'arguments' parameter.
@@ -19,6 +16,7 @@ int print_char(va_list arguments)
 	write(1, &c, 1);
 	return (1);
 }
+
 /**
 * print_string - Fucntion that print a string using write function.
 * @arguments: va_list type variable.
@@ -42,6 +40,7 @@ int print_string(va_list arguments)
 	write(1, s, count);
 	return (count);
 }
+
 /**
 * print_percent - Fucntion that print a string using write function.
 * @arguments: va_list type variable.

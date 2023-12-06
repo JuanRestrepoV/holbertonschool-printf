@@ -40,6 +40,10 @@ int _printf(const char *format, ...)
 			{
 				count += (print_integer(arguments));
 			}
+			if (format[i] == '%')
+			{
+				count += (print_percent(arguments));
+			}
 			else
 			{
 				write(1, "%", 1);

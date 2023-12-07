@@ -74,13 +74,17 @@ int itoa(unsigned int n)
 
 	if (n != 0)
 	{
+		int count;
+		char digits;
+
 		count = 0;
-		x = (n / 10);
-		y = (n % 10);
-		count += itoa(x);
-		count++;
-		int_to_char = y + '0';
+		if (n >= 10)
+		{
+			count += itoa(n / 10);
+		}
+		digits = (n % 10) + '0';
 		write(1, &int_to_char, 1);
+		count++;
 		return (count);
 	}
 	return (0);

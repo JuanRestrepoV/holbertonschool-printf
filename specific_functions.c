@@ -70,7 +70,8 @@ int itoa(unsigned int n)
 {
 	int count;
 	char digits;
-
+	
+	count = 0;
 	if (n != 0)
 	{
 		if (n >= 10)

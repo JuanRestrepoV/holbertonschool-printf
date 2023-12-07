@@ -27,10 +27,12 @@ int print_char(va_list arguments)
 int print_string(va_list arguments)
 {
 	int count = 0;
+	char n = "(null)";
 	char *s = va_arg(arguments, char *);
 
 	if (s == NULL)
 	{
+		write (1, &n, 1); 
 		return (0);
 	}
 	while (s[count] != '\0')

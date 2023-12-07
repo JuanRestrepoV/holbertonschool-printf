@@ -69,14 +69,10 @@ int print_percent(va_list arguments)
 int itoa(unsigned int n)
 {
 	int count;
-	unsigned int x, y;
-	char int_to_char;
+	char digits;
 
 	if (n != 0)
 	{
-		int count;
-		char digits;
-
 		count = 0;
 		if (n >= 10)
 		{

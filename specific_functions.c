@@ -32,8 +32,8 @@ int print_string(va_list arguments)
 
 	if (s == NULL)
 	{
-		write (1, &n, 1); 
-		return (0);
+		write (1, &n, 6); 
+		return (6);
 	}
 	while (s[count] != '\0')
 	{

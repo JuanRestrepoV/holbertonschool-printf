@@ -83,6 +83,11 @@ int itoa(unsigned int n)
 		count++;
 		return (count);
 	}
+	if (n == 0)
+	{
+		write(1, '0', 1);
+		return (1);
+	}
 	return (0);
 }
 /**

@@ -2,11 +2,12 @@
 #include <unistd.h>
 #include "main.h"
 /*
-* _printf - Custom printf function
+* _printf - printf function.
 * @format: String containing format specifiers
+* @...: variable arguments
 *
-* This function prints formatted output to stdout according to the
-* provided format string.
+* Description: This function prints formatted output to stdout according to
+* the provided format string.
 *
 * Return: Number of characters printed (excluding the null byte),
 * or -1 in case of error.
@@ -18,7 +19,7 @@ int _printf(const char *format, ...)
 	va_list arguments;
 
 	va_start(arguments, format);
-	
+
 	if (format == NULL || (format[0] == '%' && format[1] == NULL))
 	{
 		return (-1);
@@ -32,7 +33,7 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
-			write (1, &format[i], 1);
+			write(1, &format[i], 1);
 			count++;
 		}
 		i++;

@@ -81,7 +81,7 @@ int itoa(unsigned int n)
 		digits = (n % 10) + '0';
 		write(1, &digits, 1);
 		count++;
-		return (count);
+		return (count + 1);
 	}
 	if (n == 0)
 	{

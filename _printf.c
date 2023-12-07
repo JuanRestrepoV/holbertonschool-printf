@@ -1,13 +1,12 @@
 #include <stdarg.h>
 #include <unistd.h>
 #include "main.h"
-/*
+/**
 * _printf - printf function.
 * @format: String containing format specifiers
 * @...: variable arguments
 *
-* Description: this function prints formatted output to stdout according to
-* the provided format string.
+* Description: this function prints formatted output to stdout.
 *
 * Return: number of characters printed (excluding the null byte),
 * or -1 in case of error.

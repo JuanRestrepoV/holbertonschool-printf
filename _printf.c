@@ -6,10 +6,10 @@
 * @format: String containing format specifiers
 * @...: variable arguments
 *
-* Description: This function prints formatted output to stdout according to
+* Description: this function prints formatted output to stdout according to
 * the provided format string.
 *
-* Return: Number of characters printed (excluding the null byte),
+* Return: number of characters printed (excluding the null byte),
 * or -1 in case of error.
 */
 int _printf(const char *format, ...)

@@ -27,7 +27,7 @@ int print_char(va_list arguments)
 int print_string(va_list arguments)
 {
 	int count = 0;
-	char n = "(null)";
+	char *n = "(null)";
 	char *s = va_arg(arguments, char *);
 
 	if (s == NULL)

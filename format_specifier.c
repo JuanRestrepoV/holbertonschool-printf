@@ -21,16 +21,10 @@ int format_specifier(char format, va_list arguments)
 	{
 		return (print_string(arguments));
 	}
-	/**
-	if (format == 'd')
+	if (format == 'd' || format == 'i')
 	{
-		return (print_decimal(arguments));
+		return (print_digit(arguments));
 	}
-	if (format == 'i')
-	{
-		return (print_integer(arguments));
-	}
-	*/
 	if (format == '%')
 	{
 		return (print_percent(arguments));

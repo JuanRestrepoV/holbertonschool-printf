@@ -73,13 +73,12 @@ int itoa(unsigned int n)
 
 	if (n != 0)
 	{
-		count = 0;
 		if (n >= 10)
 		{
 			count += itoa(n / 10);
 		}
 		digits = (n % 10) + '0';
-		write(1, &int_to_char, 1);
+		write(1, &digits, 1);
 		count++;
 		return (count);
 	}

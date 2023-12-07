@@ -61,25 +61,53 @@ int print_percent(va_list arguments)
 * itoa - recursive function that iterates itself until reaching 0.
 * @n: unsigned variable to iterate a number no matter its sign.
 *
-* Description: this function receive a va_list 'arguments' parameter.
-* Return: 1 if succes.
+* Description: recursive function that iterates itself until 0 is reach.
+* Then it change the integer values to its ASCII character representation.
+* Return: the total count of integers turned into characters.
 */
 int itoa(unsigned int n)
 {
 	int count;
 	unsigned int x, y;
-	char itoa;
+	char int_to_char;
 
 	if (n != 0)
 	{
 		count = 0;
 		x = (n / 10);
 		y = (n % 10);
-		count += countNum(x);
+		count += itoa(x);
 		count++;
-		itoa = y + '0';
-		write(1, &itoa, 1);
+		int_to_char = y + '0';
+		write(1, &int_to_char, 1);
 		return (count);
 	}
 	return (0);
+}
+/**
+* print_digit - Function that print any digit with any sign.
+* @arguments: va_list type variable.
+*
+* Description: this function receive a va_list 'arguments' parameter.
+* Return: Number fo character printed.
+*/
+int print_digit(va_list arguments)
+{
+	int num, signCont = 0;
+	unsigned int numberCont;
+
+	num = va_arg(arguments, int);
+
+	if (num < 0)
+	{
+		write(1, "-", 1);
+		signCont = 1;
+		numberCont = num * (-1);
+	}
+	if (numberCont > 0)
+		return (signCont + itoa(numberCont));
+
+	write(1, "0", 1);
+
+	return (1);
 }

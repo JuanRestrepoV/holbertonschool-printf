@@ -7,7 +7,7 @@
 * @arguments: va_list type variable.
 *
 * Description: this function receive a va_list 'arguments' parameter.
-* Return: 1 if succes.
+* Return: Number fo character printed.
 */
 int print_char(va_list arguments)
 {
@@ -22,7 +22,7 @@ int print_char(va_list arguments)
 * @arguments: va_list type variable.
 *
 * Description: this function receive a va_list 'arguments' parameter.
-* Return: integer.
+* Return: Number of characters printed.
 */
 int print_string(va_list arguments)
 {
@@ -46,7 +46,7 @@ int print_string(va_list arguments)
 * @arguments: va_list type variable.
 *
 * Description: this function receive a va_list 'arguments' parameter.
-* Return: integer.
+* Return: Number of character printed.
 */
 int print_percent(va_list arguments)
 {
@@ -58,10 +58,28 @@ int print_percent(va_list arguments)
 	return (1);
 }
 /**
-int print_decimal(va_list arguments)
-{
-}
-int print_integer(va_list arguments)
-{
-}
+* itoa - recursive function that iterates itself until reaching 0.
+* @n: unsigned variable to iterate a number no matter its sign.
+*
+* Description: this function receive a va_list 'arguments' parameter.
+* Return: 1 if succes.
 */
+int itoa(unsigned int n)
+{
+	int count;
+	unsigned int x, y;
+	char itoa;
+
+	if (n != 0)
+	{
+		count = 0;
+		x = (n / 10);
+		y = (n % 10);
+		count += countNum(x);
+		count++;
+		itoa = y + '0';
+		write(1, &itoa, 1);
+		return (count);
+	}
+	return (0);
+}

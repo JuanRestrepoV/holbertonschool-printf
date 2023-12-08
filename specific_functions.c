@@ -88,6 +88,7 @@ int itoa(unsigned int n)
 		write(1, "0", 1);
 		return (1);
 	}
+	return (0);
 }
 /**
 * print_digit - Function that print any digit with any sign.

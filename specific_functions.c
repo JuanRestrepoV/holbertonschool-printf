@@ -80,14 +80,14 @@ int itoa(unsigned int n)
 		}
 		digits = (n % 10) + '0';
 		write(1, &digits, 1);
-		return (count + 1);
+		count++;
+		return (count);
 	}
 	if (n == 0)
 	{
 		write(1, "0", 1);
 		return (1);
 	}
-	return (0);
 }
 /**
 * print_digit - Function that print any digit with any sign.
@@ -108,6 +108,10 @@ int print_digit(va_list arguments)
 		write(1, "-", 1);
 		signCont = 1;
 		numberCont = num * (-1);
+	}
+	else
+	{
+		numberCont = num;
 	}
 	if (numberCont > 0)
 		return (signCont + itoa(numberCont));

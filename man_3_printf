@@ -1,0 +1,55 @@
+.TH PRINTF 3 "December 2023" "Holberton School"
+.SH NAME
+printf \- custom printf function
+.SH SYNOPSIS
+.B #include <stdio.h>
+.PP
+.B int printf(const char *format, ...);
+.SH DESCRIPTION
+The
+.B printf
+function writes output to the standard output (stdout) according to a format.
+.PP
+The format string contains conversion specifications that control how subsequent arguments are converted for output.
+
+.SH OPTIONS
+.TP
+.BR "%s " "string"
+Prints a string.
+
+.TP
+.BR "%d " or  "%i " "decimal or integer"
+Prints a digit.
+
+.TP
+.BR "%% " "percent"
+Prints a percent sign.
+
+.TP
+.BR "%c " "char"
+Prints a single char.
+
+.SH RETURN VALUE
+The
+.B printf
+function returns the number of characters printed (excluding the null byte used to end the output to strings).
+
+.SH EXAMPLES
+Print a string:
+.PP
+.RS
+.B printf("%s", "Hello, World!");
+.RE
+
+Print an integer:
+.PP
+.RS
+.B printf "%d" 42
+.RE
+
+.SH SEE ALSO
+.BR man (1),
+.BR printf (3)
+
+.SH AUTHOR
+Juan Pablo Restrepo Vidal
